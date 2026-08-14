@@ -1,0 +1,44 @@
+{
+  "model_id": "discovered-vc-yolov8-seg",
+  "task": "segmentation",
+  "frame_id": 1042,
+  "image": { "width": 1280, "height": 720 },
+  "predictions": [
+    {
+      "label": "person",
+      "class_id": 0,
+      "score": 0.94,
+      "bbox": [320, 140, 520, 640],
+      "segmentation": [[320, 140, 520, 140, 520, 640, 320, 640]]
+    },
+    {
+      "label": "person",
+      "class_id": 0,
+      "score": 0.58,
+      "bbox": [324, 146, 516, 634],
+      "segmentation": [[324, 146, 516, 146, 516, 634, 324, 634]]
+    },
+    {
+      "label": "forklift",
+      "class_id": 7,
+      "score": 0.82,
+      "bbox": [800, 300, 1100, 600],
+      "segmentation": [[800, 300, 1100, 300, 1100, 600, 800, 600]]
+    },
+    {
+      "label": "pallet",
+      "class_id": 9,
+      "score": 0.19,
+      "bbox": [40, 600, 120, 680],
+      "segmentation": [[40, 600, 120, 600, 120, 680, 40, 680]]
+    }
+  ],
+  "params": {
+    "confidence_threshold": 0.3,
+    "iou_threshold": 0.7,
+    "nms": "mask",
+    "output_mask": "polygon",
+    "simplify_tolerance": 1.0,
+    "min_area": 200
+  }
+}

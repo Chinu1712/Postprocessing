@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: postprocess-api
+    runtime: python
+    plan: starter          # 'free' also works; it sleeps after 15 min idle
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 2 --timeout-keep-alive 65
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: LOG_LEVEL
+        value: INFO
+
+      # Defaults mirroring the pipeline node: 30% confidence, 70% IoU dedupe.
+      - key: DEFAULT_CONFIDENCE_THRESHOLD
+        value: "0.30"
+      - key: DEFAULT_IOU_THRESHOLD
+        value: "0.70"
+      - key: DEFAULT_KEYPOINT_THRESHOLD
+        value: "0.30"
+      - key: DEFAULT_OKS_THRESHOLD
+        value: "0.70"
+
+      # Caps that keep a small instance inside its memory budget.
+      - key: MASK_MAX_SIDE
+        value: "1024"
+      - key: MAX_INSTANCES_IN
+        value: "2000"
+      - key: MAX_BATCH_ITEMS
+        value: "64"
+
+      # Set a value here (or in the dashboard) to require an API key.
+      # Leave unset and the service accepts every request.
+      - key: API_KEYS
+        sync: false

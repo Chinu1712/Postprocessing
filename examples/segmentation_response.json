@@ -1,0 +1,231 @@
+{
+  "task": "segmentation",
+  "model_id": "discovered-vc-yolov8-seg",
+  "frame_id": 1042,
+  "image": {
+    "width": 1280,
+    "height": 720
+  },
+  "mask_canvas": {
+    "width": 1024,
+    "height": 576,
+    "scale": 0.8
+  },
+  "count": 2,
+  "instances": [
+    {
+      "id": 0,
+      "source_index": 0,
+      "label": "person",
+      "label_id": 0,
+      "score": 0.94,
+      "bbox": [
+        320.0,
+        140.0,
+        520.0,
+        640.0
+      ],
+      "bbox_format": "xyxy",
+      "bbox_xywh": [
+        320.0,
+        140.0,
+        200.0,
+        500.0
+      ],
+      "area": 100000.0,
+      "has_mask": true,
+      "mask": {
+        "size": [
+          576,
+          1024
+        ],
+        "scale": 0.8,
+        "format": "polygon",
+        "polygons": [
+          [
+            320.62,
+            140.62,
+            519.38,
+            140.62,
+            519.38,
+            639.38,
+            320.62,
+            639.38
+          ]
+        ],
+        "coordinate_space": "image_pixels"
+      }
+    },
+    {
+      "id": 1,
+      "source_index": 2,
+      "label": "forklift",
+      "label_id": 7,
+      "score": 0.82,
+      "bbox": [
+        800.0,
+        300.0,
+        1100.0,
+        600.0
+      ],
+      "bbox_format": "xyxy",
+      "bbox_xywh": [
+        800.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "area": 90000.0,
+      "has_mask": true,
+      "mask": {
+        "size": [
+          576,
+          1024
+        ],
+        "scale": 0.8,
+        "format": "polygon",
+        "polygons": [
+          [
+            800.62,
+            300.62,
+            1099.38,
+            300.62,
+            1099.38,
+            599.38,
+            800.62,
+            599.38
+          ]
+        ],
+        "coordinate_space": "image_pixels"
+      }
+    }
+  ],
+  "detections": [
+    {
+      "id": 0,
+      "source_index": 0,
+      "label": "person",
+      "label_id": 0,
+      "score": 0.94,
+      "bbox": [
+        320.0,
+        140.0,
+        520.0,
+        640.0
+      ],
+      "bbox_format": "xyxy",
+      "bbox_xywh": [
+        320.0,
+        140.0,
+        200.0,
+        500.0
+      ],
+      "area": 100000.0,
+      "has_mask": true,
+      "mask": {
+        "size": [
+          576,
+          1024
+        ],
+        "scale": 0.8,
+        "format": "polygon",
+        "polygons": [
+          [
+            320.62,
+            140.62,
+            519.38,
+            140.62,
+            519.38,
+            639.38,
+            320.62,
+            639.38
+          ]
+        ],
+        "coordinate_space": "image_pixels"
+      }
+    },
+    {
+      "id": 1,
+      "source_index": 2,
+      "label": "forklift",
+      "label_id": 7,
+      "score": 0.82,
+      "bbox": [
+        800.0,
+        300.0,
+        1100.0,
+        600.0
+      ],
+      "bbox_format": "xyxy",
+      "bbox_xywh": [
+        800.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "area": 90000.0,
+      "has_mask": true,
+      "mask": {
+        "size": [
+          576,
+          1024
+        ],
+        "scale": 0.8,
+        "format": "polygon",
+        "polygons": [
+          [
+            800.62,
+            300.62,
+            1099.38,
+            300.62,
+            1099.38,
+            599.38,
+            800.62,
+            599.38
+          ]
+        ],
+        "coordinate_space": "image_pixels"
+      }
+    }
+  ],
+  "stats": {
+    "input_count": 4,
+    "source_container": "predictions",
+    "dropped_low_confidence": 1,
+    "dropped_by_label_filter": 0,
+    "dropped_no_mask": 0,
+    "dropped_by_area": 0,
+    "suppressed_by_nms": 1,
+    "merged": 0,
+    "nms_similarity": "mask_iou",
+    "kept": 2,
+    "duration_ms": 46.35
+  },
+  "params": {
+    "confidence_threshold": 0.3,
+    "max_detections": 300,
+    "class_agnostic_nms": false,
+    "clip_to_image": true,
+    "bbox_format": "auto",
+    "coordinate_space": "auto",
+    "keep_extra_fields": true,
+    "sort_by": "score",
+    "iou_threshold": 0.7,
+    "nms": "mask",
+    "mask_binarize_threshold": 0.5,
+    "mask_max_side": 1024,
+    "min_area": 200.0,
+    "min_area_ratio": 0.0,
+    "max_area_ratio": 1.0,
+    "min_component_area": 0.0,
+    "fill_holes": false,
+    "merge_same_label": false,
+    "simplify_tolerance": 1.0,
+    "output_mask": "polygon",
+    "bbox_from_mask": true,
+    "require_mask": false
+  },
+  "warnings": [
+    "masks rasterised at 1024x576 (scale 0.800) to stay within mask_max_side=1024; polygon output is scaled back to full resolution"
+  ]
+}

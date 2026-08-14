@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python --version)",
+      "PowerShell(py --version)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m pytest tests/test_core.py -q 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m pytest tests/test_api.py -q 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe \"C:\\\\Users\\\\CHINMA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ChinmayGandhewar-OneDrive---Celebal-Technologies-Private-Limited-Desktop-Postprocess\\\\bb0d4d86-7e5b-4eac-874f-5828cd7c02d9\\\\scratchpad\\\\probe_oks.py\")",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m pytest -q 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m ruff check app tests scripts)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe \"C:\\\\Users\\\\CHINMA~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ChinmayGandhewar-OneDrive---Celebal-Technologies-Private-Limited-Desktop-Postprocess\\\\bb0d4d86-7e5b-4eac-874f-5828cd7c02d9\\\\scratchpad\\\\capture.py\" 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe scripts/smoke_test.py http://127.0.0.1:8124)",
+      "PowerShell(Start-Process -FilePath \".\\\\.venv\\\\Scripts\\\\python.exe\" -ArgumentList \"-m\",\"uvicorn\",\"app.main:app\",\"--port\",\"8000\" -NoNewWindow -PassThru)",
+      "PowerShell(curl.exe -s http://127.0.0.1:8000/health)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m pytest 2>&1)"
+    ]
+  }
+}
